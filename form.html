@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="head">
+        <h1>Registration Form</h1>
+    </div>
+    <div class="container">
+        <div class="personal">
+            <table>
+                <h2>Personal Details</h2>
+                <tr>
+                    <td><label for="name">Name </label><span class="red">*</span></td>
+                    <td><select name="" id="" required >
+                        <option value="mr" selected>Mr</option>
+                        <option value="ms">Ms</option>
+                        <option value="mrs">Mrs</option>
+                    </select></td>
+                    <td><input name="name" id="name" type="text" placeholder="First Name" required></td>
+                    <td><input name="name" id="name" type="text" placeholder="Middle Name" required></td>
+                    <td><input name="name" id="name" type="text" placeholder="Last Name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="fname">Father's Name </label><span class="red">*</span></td>
+                    <td><select name="" id="" required>
+                        <option value="mr" selected>Mr</option>
+                        <option value="ms">Ms</option>
+                        <option value="mrs">Mrs</option>
+                    </select></td>
+                    <td><input name="fname" id="fname" type="text" placeholder="First Name" required></td>
+                    <td><input name="fname" id="fname" type="text" placeholder="Middle Name" required></td>
+                    <td><input name="fname" id="fname" type="text" placeholder="Last Name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="mname">Mother's Name </label><span class="red">*</span></td>
+                    <td><select name="" id="" required >
+                        <option value="mr" >Mr</option>
+                        <option value="ms">Ms</option>
+                        <option value="mrs" selected>Mrs</option>
+                    </select></td>
+                    <td><input name="mname" id="mname" type="text" placeholder="First Name" required></td>
+                    <td><input name="mname" id="mname" type="text" placeholder="Middle Name" required></td>
+                    <td><input name="mname" id="mname" type="text" placeholder="Last Name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of birth </label><span class="red">*</span></td>
+                    <td colspan="2"><input name="dob" id="dob" type="date" required></td>
+                    <td><label for="gender">Gender </label><span class="red">*</span></td>
+                    <td><select name="" id="gender" required>
+                        <option value="male" selected>Male</option>
+                        <option value="female">Female</option>
+                    </select></td>
+
+                </tr>
+                <tr>
+                    <td><label for="nat">Nationality <span class="red">*</span></label></td>
+                    <td colspan="2"><input type="text" name="nat" id="nat" required></td>
+                    <td><label for="bldGrp">Blood Group <span class="red">*</span></label></td>
+                    <td><input type="text" name="bldGrp" id="bldGrp" required></td>
+                </tr>
+            </table>
+        </div>
+        <div class="perAd">
+            <table>
+                <h2>Permanent Address</h2>
+                <tr>
+                    <td >House No/Apartment Name/Block<p>No <span class="red">*</span></p></td>
+                    <td class="home" colspan="3"><input type="text" id="dNo1" required ></td>
+                </tr>
+                <tr>
+                    <td>Road Street/Lane <span class="red">*</span></td>
+                    <td><input type="text" id="road1" required></td>
+                    <td>Area/Landmark <span class="red">*</span></td>
+                    <td><input type="text" id="area1" required></td>
+                </tr>
+                <tr>
+                    <td><label for="country1">Country </label><span class="red">*</span></td>
+                    <td><select name="country" id="country1" required style="width: 250px;height: 33px;">
+                        <option value="">India</option>
+                        <option value="">India</option>
+                        <option value="">India</option>
+                        <option value="">India</option>
+                        <option value="">India</option>
+                    </select></td>
+                    <td>State <span class="red">*</span></td>
+                    <td><input type="text" name="" id="state1" required></td>
+                </tr>
+                <tr>
+                    <td> <label for="city">City <span class="red">*</span></label></td>
+                    <td><input type="text" name="city" id="city1" required></td>
+                    <td><label for="pincode">Pincode</label><span class="red">*</span></td>
+                    <td><input type="text" name="pincode" id="pincode1" required></td>
+                </tr>
+            </table>
+            <div class="preAdd">
+                <label for="preAdd" style="margin-right: 50px;">Are the permanent and Present Address same?</label>
+                <input  style="width: 30px;height: 15px;" type="radio" name="preAdd" id="preAdd" value="1" onclick="fillAddress()" >Yes
+                <input  style="width: 30px;height: 15px;" type="radio" name="preAdd" id="preAdd" value="0" onclick="removeAddress()">No
+            </div>
+        </div>
+        <div class="perAd2" id="perAd2">
+            <table>
+                <h2>Permanent Address</h2>
+                <tr>
+                    <td >House No/Apartment Name/Block<p>No <span class="red">*</span></p></td>
+                    <td class="home" colspan="3"><input type="text" id="dNo2" required></td>
+                </tr>
+                <tr>
+                    <td>Road Street/Lane <span class="red">*</span></td>
+                    <td><input type="text" id="road2" required></td>
+                    <td>Area/Landmark <span class="red">*</span></td>
+                    <td><input type="text" id="area2" required></td>
+                </tr>
+                <tr>
+                    <td><label for="country2">Country </label><span class="red">*</span></td>
+                    <td><select name="country" id="country2" required style="width: 250px;height: 33px;">
+                        <option value="">India</option>
+                        <option value="">India</option>
+                        <option value="">India</option>
+                        <option value="">India</option>
+                        <option value="">India</option>
+                    </select></td>
+                    <td>State <span class="red">*</span></td>
+                    <td><input type="text" name="" id="state2" required></td>
+                </tr>
+                <tr>
+                    <td> <label for="city">City <span class="red">*</span></label></td>
+                    <td><input type="text" name="city" id="city2" required></td>
+                    <td><label for="pincode">Pincode</label><span class="red">*</span></td>
+                    <td><input type="text" name="pincode" id="pincode2" required></td>
+                </tr>
+            </table>
+        </div>
+        <div class="contact">
+            <table>
+                <h2>Contact Details</h2>
+                <tr>
+                    <td><label for="email">Email ID <span class="red">*</span></label></td>
+                    <td><input type="text" name="email" id="email" required></td>
+                    <td><label for="aEmail">Alternate Email ID </label></td>
+                    <td><input type="text" name="aEmail" id="aEmail" required></td>
+                </tr>
+                <tr>
+                    <td><label for="mNo">Mobile Number <span class="red">*</span><span class="red">*</span></label></td>
+                    <td><input type="text" name="mNo" id="mNo" required></td>
+                    <td><label for="amNo">Alternate Number <span class="red">*</span></label></td>
+                    <td><input type="text" name="amNo" id="amNo" required></td>
+                    
+                </tr>
+            </table>
+        </div>
+        <div class="edu">
+            <h2>Academic Details</h2>
+            <div class="preAdd" style="margin-top: 10px;">
+                <label for="preAdd" style="margin-right: 50px;">Have you done PG ? <span class="red">*</span></label>
+                <input  style="width: 30px;height: 15px;" type="radio" name="preAdd" id="preAdd" value="1" onclick="showPG()" >Yes
+                <input  style="width: 30px;height: 15px;" type="radio" name="preAdd" id="preAdd" value="0" onclick="closePG()" >No
+            </div>
+            <div class="pg" id="pg">
+                <table style="border-bottom: 1px solid rgb(137, 133, 133);padding: 20px;">
+                    <caption style="padding-top: 10px;">PG</caption>
+                    <tr>
+                        <td><label for="clgName">Institute Name <span class="red">*</span></label></td>
+                        <td><input type="text" name="clgName" id="clgName" required></td>
+                    
+                    
+                        <td><label for="clgCourse">Specialization <span class="red">*</span></label></td>
+                        <td><input type="text" name="clgCourse" id="clgCourse" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="yop">Year of <p>passing <span class="red">*</span></p></label></td>
+                        <td><input type="month" name="yop" id="yop" required></td>
+                        <td><label for="grade">CGPA<span class="red">*</span></label></td>
+                        <td><input style="width: 60px;margin-right: 10px;" type="text" name="" id="" required><select name="grade" id="grade" required>
+                            <option value="cgpa">CGPA</option>
+                            <option value="percent">%</option>
+                        </select></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <table style="border-bottom: 1px solid rgb(137, 133, 133); padding: 20px;">
+                <caption style="padding-top: 10px;">UG</caption>
+                <tr>
+                    <td><label for="clgName">Institute Name <span class="red">*</span></label></td>
+                    <td><input type="text" name="clgName" id="clgName" required></td>
+                
+                
+                    <td><label for="clgCourse">Specialization <span class="red">*</span></label></td>
+                    <td><input required type="text" name="clgCourse" id="clgCourse"></td>
+                </tr>
+                <tr>
+                    <td><label for="yop">Year of <p>passing <span class="red">*</span></p></label></td>
+                    <td><input required type="month" name="yop" id="yop"></td>
+                    <td><label for="grade">CGPA <span class="red">*</span></label></td>
+                    <td><input required style="width: 60px;margin-right: 10px;" type="text" name="" id=""><select required ="grade" id="grade">
+                        <option value="cgpa">CGPA</option>
+                        <option value="percent">%</option>
+                    </select></td>
+                </tr>
+            </table>
+            <table style="border-bottom: 1px solid rgb(137, 133, 133); padding: 20px;">
+                <caption style="padding-top: 10px;">XII Grade/Diploma</caption>
+                <tr>
+                    <td><label for="clgName">Institute Name <span class="red">*</span></label></td>
+                    <td><input required type="text" name="clgName" id="clgName"></td>
+                
+                
+                    <td><label for="clgCourse">Board of Education <span class="red">*</span></label></td>
+                    <td><input required type="text" name="clgCourse" id="clgCourse"></td>
+                </tr>
+                <tr>
+                    <td><label for="yop">Year of <p>passing <span class="red">*</span></p></label></td>
+                    <td><input required type="month" name="yop" id="yop"></td>
+                    <td><label for="grade">CGPA <span class="red">*</span></label></td>
+                    <td><input required style="width: 60px;margin-right: 10px;" type="text" name="" id=""><select required name="grade" id="grade">
+                        <option value="cgpa">CGPA</option>
+                        <option value="percent">%</option>
+                    </select></td>
+                </tr>
+            </table>
+            <table style="padding: 20px;">
+                <caption style="padding-top: 10px;">X Grade</caption>
+                <tr>
+                    <td><label for="clgName">Institute Name <span class="red">*</span></label></td>
+                    <td><input required type="text" name="clgName" id="clgName"></td>
+                
+                
+                    <td><label for="clgCourse">Board of Education <span class="red">*</span></label></td>
+                    <td><input required type="text" name="clgCourse" id="clgCourse"></td>
+                </tr>
+                <tr>
+                    <td><label for="yop">Year of <p>passing <span class="red">*</span></p></label></td>
+                    <td><input required type="month" name="yop" id="yop"></td>
+                    <td><label for="grade">CGPA <span class="red">*</span></label></td>
+                    <td><input required style="width: 60px;margin-right: 10px;" type="text" name="" id=""><select required name="grade" id="grade">
+                        <option value="cgpa">CGPA</option>
+                        <option value="percent">%</option>
+                    </select></td>
+                </tr>
+            </table>
+        </div>
+        <div class="lang">
+            <h2>Language Known <span class="red">*</span></h2>
+            <table class="langTable" style="margin-left: 50px;">
+                <tr >
+                    <th>Language</th>
+                    <th>Speak</th>
+                    <th>Read</th>
+                    <th>Write</th>
+                    <th>Mother tongue</th>
+                </tr>
+                <tr>
+                    <td><label for="lang">English</label></td>
+                    <td><input style="height: 15px;" type="checkbox" name="lang" id="lang"></td>
+                    <td><input style="height: 15px;" type="checkbox" name="lang" id="lang"></td>
+                    <td><input style="height: 15px;" type="checkbox" name="lang" id="lang"></td>
+                    <td><input style="height: 15px;" type="checkbox" name="lang" id="lang"></td>
+                </tr>
+                <tr>
+                    <td><label for="lang">Tamil</label></td>
+                    <td><input style="height: 15px;" type="checkbox" name="lang" id="lang"></td>
+                    <td><input style="height: 15px;" type="checkbox" name="lang" id="lang"></td>
+                    <td><input style="height: 15px;" type="checkbox" name="lang" id="lang"></td>
+                    <td><input style="height: 15px;" type="checkbox" name="lang" id="lang"></td>
+                </tr>
+                <tr>
+                    <td><label for="lang">Hindi</label></td>
+                    <td><input style="height: 15px;" type="checkbox" name="lang" id="lang"></td>
+                    <td><input style="height: 15px;" type="checkbox" name="lang" id="lang"></td>
+                    <td><input style="height: 15px;" type="checkbox" name="lang" id="lang"></td>
+                    <td><input style="height: 15px;" type="checkbox" name="lang" id="lang"></td>
+                </tr>
+              
+            </table>
+            <button>Add new language</button>
+        </div>
+        <div class="other">
+            <h2>Other Details</h2>
+            <table>
+                <tr>
+                    <td><label for="">Upload Photo <span class="red">*</span></label></td>
+                    <td><input required type="file" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td><label for="">Upload CV <span class="red">*</span></label></td>
+                    <td><input required type="file" name="" id=""></td>
+                </tr>
+            </table>
+        </div>
+        <div class="terms">
+            <h2>Terms & Conditions <span class="red">*</span></h2>
+            <p class="cond">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p><input required style="width: 30px;height: 15px;" type="checkbox" name="" id="">I agree</p>
+        </div>
+        <button class="sub"><a href="#popup1">Submit</a></button>
+    </div>
+
+
+
+    <div id="popup1" class="popup">
+        <div class="message">
+            <div class="content">
+                <img src="success.png" alt="" width="100px" height="100px">
+                <h1>Thanks for filling the application.</h1>
+                <p style="font-size: 17px;">Your response was submitted successfully</p>
+                <button style="padding: 5px; border-radius: 7px;cursor: pointer; background-color: #add8f5;" type="submit"><a href="index.html">Back to Registration</a></button>
+            </div>
+            
+        </div>
+        
+    </div>
+<script>
+    let x =document.getElementById("pg");
+    const dNo2=document.getElementById("dNo2");
+    const road2=document.getElementById("road2");
+    const country2=document.getElementById("country2");
+    const state2=document.getElementById("state2");
+    const pincode2=document.getElementById("pincode2");
+    const city2=document.getElementById("city2");
+    const area2=document.getElementById("area2");
+    function showPG(){
+        x.style.display="block";
+    }
+    function closePG(){
+        x.style.display="none";
+    }
+    function fillAddress(){
+        const dNo1=document.getElementById("dNo1").value;
+        const road1=document.getElementById("road1").value;
+        const area1=document.getElementById("area1").value;
+        const country1=document.getElementById("country1").value;
+        const state1=document.getElementById("state1").value;
+        const pincode1=document.getElementById("pincode1").value;
+        const city1=document.getElementById("city1").value;
+        dNo2.value=dNo1;
+        road2.value=road1;
+        area2.value=area1;
+        country2.value=country1;
+        state2.value=state1;
+        pincode2.value=pincode1;
+        city2.value=city1;
+    }
+    function removeAddress(){
+        dNo2.value=null;
+        road2.value=null;
+        area2.value=null;
+        country2.value=null;
+        state2.value=null;
+        pincode2.value=null;
+        city2.value=null;
+    }
+</script>
+
+</body>
+</html>

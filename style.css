@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #cfe5ecb3;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(20, 20, 117, 0.868);
+}
+.head h1{
+    font-size: 4rem;
+    text-align: center;
+    color: #bee0ea;
+    text-transform: uppercase;
+}
+.container{
+   background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 72.5%;
+    margin-top: 30px;
+    margin-left: 200px;
+    border: 1px solid black;
+    margin-bottom: 50px;
+    
+}
+table{
+    width: 100%;
+}
+.red{
+    color: red;
+}
+.personal table{
+    width: 1100px;
+}
+.perAd table{
+    width: 1100px;
+}
+td{
+    padding: 7px;
+}
+.personal{
+    margin-bottom: 10px;
+}
+.personal h2{
+    padding: 7px;
+    font-size: 20px;
+    background-color: #add8f5;
+}
+.perAd{
+    
+    margin-bottom: 10px;
+}
+.perAd h2{
+    padding: 7px;
+    font-size: 20px;
+    background-color: #add8f5;
+}
+.perAd2{
+    display: block;
+    margin-bottom: 10px;
+}
+.perAd2 h2{
+    padding: 7px;
+    font-size: 20px;
+    background-color: #add8f5;
+}
+input{
+    padding-left: 10px;
+    width: 250px;
+    height: 30px;
+}
+.home input{
+    width: 900px;
+}
+.preAdd{
+    
+    padding: 7px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30px;
+    background-color: rgb(233, 225, 225);
+}
+.contact h2{
+    padding: 7px;
+    font-size: 20px;
+    background-color: #add8f5;
+}
+.contact table{
+    width: 1100px;
+}
+
+.edu table{
+    width: 1100px;
+}
+.edu h2{
+    padding: 7px;
+    font-size: 20px;
+    background-color: #add8f5;
+}
+.lang h2{
+    margin-left: 37px;
+    width: 92.2%;
+    padding: 7px;
+    font-size: 20px;
+    background-color: #add8f5;
+}
+.lang table{
+    margin-left: 20px;
+    width: 1000px;
+}
+.lang{
+    margin-left: 20px;
+}
+
+.lang button{
+    outline: 0;
+    border: 1 px solid black;
+    border-radius: 7px;
+    padding: 5px;
+    margin-left: 50px;
+}
+.lang,.edu,.perAd,.personal,.contact{
+    margin-bottom: 10px;
+}
+.other h2{
+    padding: 7px;
+    font-size: 20px;
+    background-color: #add8f5;
+}
+.other table{
+    width: 1100px;
+}
+.terms{
+    width: 1100px;
+}
+.terms h2{
+    padding: 7px;
+    font-size: 20px;
+    background-color: #add8f5;
+}
+.terms .cond{
+    border: 1px solid black;
+    margin: 30px;
+    width: 80%;
+    height: 150px;
+    overflow: scroll;
+}
+.terms p{
+    margin-left: 20px;
+}
+.sub{
+    width: 70px;
+    margin: 20px;
+    padding: 5px;
+    outline: 0;
+    border-radius: 5px;
+    background-color: #add8f5;
+    color: darkblue;
+    cursor: pointer;
+    font-size: 17px;
+}
+.sub a{
+    text-decoration: none;
+    color: darkblue;
+}
+caption{
+    margin-top: 5px;
+    font-weight: bolder;
+}
+.cond{
+    font-size: 15px;
+}
+
+.popup{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.715);
+    position: fixed;
+    left: 0;
+    top: 50%;
+    right:0 ;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 500ms;
+}
+.popup:target{
+    opacity: 1;
+    visibility: visible;
+}
+.message{
+    margin-top: 16%;
+    margin-left: 30%;
+    background-color: white;
+    width: 40%;
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 100px;
+}
+.content{
+    text-align: center;
+    margin-left: -80px;
+    padding: 10px;
+}
+.content button{
+    margin-top: 10px;
+}
+.content p,h1{
+    margin-top: 10px;
+}
+.content a{
+    text-decoration: none;
+    color: black;
+}
+
+.pg{
+    display: none;
+}
+#dob{
+    width: 320px;
+}
+#nat{
+    width: 320px;
+}
